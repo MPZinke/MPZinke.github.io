@@ -34,7 +34,7 @@ body:
   - type: input
     id: what-do-you-want-migrated-other
     attributes:
-      label: ""
+      label: " "
       description: "If other, please specify what"
     validations:
       required: false
