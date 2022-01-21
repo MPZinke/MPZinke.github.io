@@ -8,7 +8,7 @@ body:
       value: "# ADO Migration Guide: Work Items"
   - type: markdown
     attributes:
-      value: |
+      value:
 "## What Are Work Items?\n" |
 "Use work items to track anything you need to track. Each work item represents an object stored in the work item data store.\n" |
 "Each work item is based on a work item type. And work item types have a unique identifier within an organization or project collection.\n" |
