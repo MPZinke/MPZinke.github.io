@@ -9,20 +9,26 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## What Are Work Items?\n
-        Use work items to track anything you need to track. Each work item represents an object stored in the work item data store.\n
-        Each work item is based on a work item type. And work item types have a unique identifier within an organization or project collection.\n
-        The available work item types depend on the process you used when creating your project (Agile, Basic, Scrum, or CMMI).\n
-        \n
+        ## What Are Work Items?
+        Use work items to track anything you need to track. Each work item represents an object stored in the work item data store.
+        Each work item is based on a work item type. And work item types have a unique identifier within an organization or project collection.
+        The available work item types depend on the process you used when creating your project (Agile, Basic, Scrum, or CMMI).
+        
         ## BEFORE YOU CONTINUE MAKE SURE YOU UNDERSTAND
         - Work Items can be migrated separately from repos, but they will not be able to link PRs/commits to work items until ADOS
          repos have been migrated to either GHEC or ADOC.
         - If and when your repos are in GHEC, and after Work Items are migrated, you or your team needs to set up github connection
          in new ADOC project with their GHEC repo(s)."
+
+        ---
+
+        # Questions
+
+        ## 1. Migration Type
   - type: dropdown
     id: what-do-you-want-migrated
     attributes:
-      label: "1. What do you want migrated?"
+      label: "What do you want migrated?"
       options:
         - Team
         - Project
@@ -34,7 +40,6 @@ body:
   - type: input
     id: what-do-you-want-migrated-other
     attributes:
-      label: "<p>If other, please specify what</p>"
-      description: "If other, please specify what"
+      label: "If other, please specify what"
     validations:
       required: false
