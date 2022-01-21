@@ -24,6 +24,7 @@ body:
     id: what-do-you-want-migrated
     attributes:
       description: What do you want migrated?
+      label: What Is Being Migrated
       options:
         - Team
         - Project
