@@ -43,3 +43,14 @@ body:
       label: "If other, please specify what"
     validations:
       required: false
+
+  - type: markdown
+    attributes:
+      value: "2. Scoping"
+  - type: dropdown
+    id: work-item-scoping
+    attributes:
+      label: "Which do I represent?"
+      options:
+        - Individual Project
+        - Team
