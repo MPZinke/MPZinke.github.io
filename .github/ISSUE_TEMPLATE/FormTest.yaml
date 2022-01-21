@@ -1,62 +1,16 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
-assignees:
-  - octocat
+name: "ADO Migration Guide: Work Items"
+description: "Form for Work Item Migration"
+title: "[Work Item Migration]: "
+labels: ["Work Item"]
 body:
   - type: markdown
+    id: what-is
     attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
+      label: What Are Work Items?
+      value: "Use work items to track anything you need to track. Each work item represents an object stored in the work item data store. Each work item is based on a work item type. And work item types have a unique identifier within an organization or project collection. The available work item types depend on the process you used when creating your project (Agile, Basic, Scrum, or CMMI)."
+  - type: markdown
+    id: before-you-continue
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
-    validations:
-      required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: BEFORE YOU CONTINUE MAKE SURE YOU UNDERSTAND
+      value: Work Items can be migrated separately from repos, but they will not be able to link PRs/commits to work items until ADOS repos have been migrated to either GHEC or ADOC. |
+        If and when your repos are in GHEC, and after Work Items are migrated, you or your team needs to set up github connection in new ADOC project with their GHEC repo(s).
