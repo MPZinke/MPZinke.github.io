@@ -54,3 +54,5 @@ body:
       options:
         - Individual Project
         - Team
+    validations:
+        required: true
