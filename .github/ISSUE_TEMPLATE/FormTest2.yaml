@@ -48,7 +48,7 @@ body:
     attributes:
       value: "2. Scoping"
   - type: dropdown
-    id: work-item-scoping
+    id: work-item-scoping-representation
     attributes:
       label: "Which do I represent?"
       options:
@@ -56,3 +56,9 @@ body:
         - Team
     validations:
         required: true
+  - type: input
+    id: work-item-scoping-representation-team
+    attributes:
+      label: "If team, please specify what"
+    validations:
+      required: false
