@@ -4,13 +4,8 @@ title: "[Work Item Migration]: "
 labels: ["Work Item"]
 body:
   - type: markdown
-    value: "# ADO Migration Guide: Work Items"
+    value: "## Welcome!"
   - type: markdown
-    value: "## What Are Work Items?"
-  - type: markdown
-    value: "Use work items to track anything you need to track. Each work item represents an object stored in the work item data store. Each work item is based on a work item type. And work item types have a unique identifier within an organization or project collection. The available work item types depend on the process you used when creating your project (Agile, Basic, Scrum, or CMMI)."
-  - type: markdown
-    value: "## BEFORE YOU CONTINUE MAKE SURE YOU UNDERSTAND"
-  - type: markdown
-    value: "Work Items can be migrated separately from repos, but they will not be able to link PRs/commits to work items until ADOS repos have been migrated to either GHEC or ADOC. |
-            If and when your repos are in GHEC, and after Work Items are migrated, you or your team needs to set up github connection in new ADOC project with their GHEC repo(s)."
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug! If you need real-time help, join us on Discord.
