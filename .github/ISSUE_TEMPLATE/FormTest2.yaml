@@ -1,4 +1,4 @@
-name: "ADO Migration Guide: Work Items Test 2"
+name: "ADO Migration Guide: Work Items"
 description: "Form for Work Item Migration"
 title: "[Work Item Migration]: "
 labels: ["Work Item"]
@@ -22,8 +22,7 @@ body:
   - type: dropdown
     id: what-do-you-want-migrated
     attributes:
-      description: What do you want migrated?
-      label: What Is Being Migrated
+      label: "1. What do you want migrated?"
       options:
         - Team
         - Project
@@ -32,4 +31,9 @@ body:
         - Other
     validations:
         required: true
-
+  - type: input
+    id: what-do-you-want-migrated-other
+    attributes:
+      label: "\tIf other, please specify what"
+    validations:
+      required: false
