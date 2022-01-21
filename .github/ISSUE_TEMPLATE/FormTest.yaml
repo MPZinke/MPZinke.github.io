@@ -31,5 +31,5 @@ body:
         - Product
         - App
         - Other
-      validations:
+    validations:
         required: true
