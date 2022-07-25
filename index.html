@@ -1,1 +1,72 @@
-Hello World
+<!DOCTYPE html>
+<html>
+	<body>
+		<canvas id="canvas" ></canvas>
+	</body>
+</html>
+
+<script>
+	let CANVAS = document.getElementById("canvas");
+	CANVAS.height = document.getElementsByTagName("html")[0].clientHeight - 16;
+	CANVAS.width = document.getElementsByTagName("html")[0].clientWidth - 16;
+	CANVAS.style["background-color"] = "#00FFFF";
+	let CONTEXT = CANVAS.getContext("2d");
+
+
+	class Cat
+	{
+		constructor()
+		{
+			this.direction = [.866, .5];
+			this.position = [CANVAS.width / 2, CANVAS.height / 2];
+			this.size = [450, 184];
+			this.image = new Image();
+			this.image.src = "NyanCat.png";
+			this.image.onload = (e) =>
+			{
+				this.draw();
+			}
+		}
+
+
+		move()
+		{
+			for(var x = 0; x < 2; x++)
+			{
+				// If the (right|bottom) part is passed the (right|bottom) border
+				//  or the (left|top) part is passed the (left|top) border.
+				if(this.position[x] + this.size[x] / 2 > [CANVAS.width, CANVAS.height][x]
+				  || this.position[x] - this.size[x]/2 < 0)
+				{
+					this.direction[x] *= -1;
+				}
+			}
+
+			this.position[0] += this.direction[0];
+			this.position[1] += this.direction[1];
+
+			this.erase();
+			this.draw();
+		}
+
+
+		draw()
+		{
+			CONTEXT.drawImage(this.image, this.position[0] - this.size[0] / 2, this.position[1] - this.size[1] / 2,
+			  this.size[0], this.size[1]);
+		}
+
+
+		erase()
+		{
+			CONTEXT.clearRect(0, 0, CANVAS.width, CANVAS.height);
+		}
+	}
+
+
+	let NYAN_CAT = new Cat();
+	setInterval(function(NYAN_CAT) { NYAN_CAT.move(); }.bind(null, NYAN_CAT), 5);
+
+
+</script>
+
