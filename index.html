@@ -20,11 +20,15 @@
 			this.direction = [.866, .5];
 			this.position = [CANVAS.width / 2, CANVAS.height / 2];
 			this.size = [450, 184];
+
+			this.audio = new Audio("NyanCat.mp3");
+
 			this.image = new Image();
 			this.image.src = "NyanCat.png";
 			this.image.onload = (e) =>
 			{
 				this.draw();
+				this.audio.play();
 			}
 		}
 
@@ -65,7 +69,7 @@
 
 
 	let NYAN_CAT = new Cat();
-	setInterval(function(NYAN_CAT) { NYAN_CAT.move(); }.bind(null, NYAN_CAT), 5);
+	setInterval(function(NYAN_CAT) { NYAN_CAT.move(); }.bind(null, NYAN_CAT), 3);
 
 
 </script>
